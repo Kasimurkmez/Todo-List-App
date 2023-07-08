@@ -1,25 +1,27 @@
-import React, { useState } from "react";
 import todoLogo from "../../assets/todoLogo.svg";
-import { AiOutlinePlusCircle } from "react-icons/ai";
 import styles from "./header.module.css";
+import { AiOutlinePlusCircle } from "react-icons/ai";
+import { useState } from "react";
 
-const Header = ({ handleAddTask }) => {
+const Heade = ({ handleAddTask }) => {
   const [title, setTitle] = useState("");
 
-  const handleSubmit = (event) => {
+  function handleSubmit(event) {
     event.preventDefault();
+
     handleAddTask(title);
     setTitle("");
-  };
+  }
 
-  const onChangeTitle = (event) => {
+  function onChangeTitle(event) {
     setTitle(event.target.value);
-  };
+  }
 
   return (
     <header className={styles.header}>
+      <img src={todoLogo} />
+
       <form onSubmit={handleSubmit} className={styles.newTaskForm}>
-        <img src={todoLogo} alt="" />
         <input
           placeholder="Add a new task"
           type="text"
@@ -34,4 +36,4 @@ const Header = ({ handleAddTask }) => {
   );
 };
 
-export default Header;
+export default Heade;

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Header from "./components/header/Header";
+import Heade from "./components/header/Heade";
 import Tasks from "./components/tasks/Tasks";
 
 const LOCAL_STORAGE_KEY = "todo:tasks";
@@ -54,7 +54,7 @@ function App() {
 
   return (
     <>
-      <Header handleAddTask={addTask} />
+      <Heade handleAddTask={addTask} />
       <Tasks
         tasks={tasks}
         onDelete={deleteTaskById}
