@@ -25,6 +25,7 @@
     font-weight: 700;
   }
   
+  
   .textPurple {
     color: #8284FA !important;
   }
@@ -43,3 +44,5 @@
     flex-direction: column;
     gap: 12px;
   }
+
+
